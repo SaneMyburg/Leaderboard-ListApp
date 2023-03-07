@@ -12,21 +12,20 @@ module.exports = {
     clean: true,
   },
   plugins: [
-        new HtmlWebpackPlugin({
-          template: './src/index.html',
-        }),
-      ],
-      devServer: {
-            static: './dist',
-          },
-      module: {
-            rules: [
-              {
-                test: /\.css$/i,
-                use: ['style-loader', 'css-loader'],
-              },
-        
-            ],
-          },    
-}
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
+  devServer: {
+    static: './dist',
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
 
+    ],
+  },
+};

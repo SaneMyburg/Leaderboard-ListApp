@@ -1,4 +1,5 @@
-import './style.css'
+import './style.css';
+
 const title = document.createElement('h3');
 title.textContent = 'Webpack made easy!';
 

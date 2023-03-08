@@ -1,18 +1,17 @@
 const gameUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/7WIjXsAQjeapEeq6tE9U/scores';
 
-const postData = async (person) => {
-  const response = await fetch( `${gameUrl}`,
+const postData = async (player) => {
+  const response = await fetch(`${gameUrl}`,
     {
       method: 'POST',
       body: JSON.stringify({
-        user: person.user,
-        score: person.score,
+        user: player.user,
+        score: player.score,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
       },
-    },
-  );
+    });
   return response.json();
 };
 

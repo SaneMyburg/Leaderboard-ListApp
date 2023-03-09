@@ -39,8 +39,7 @@ header {
 }
 
 #refresh-score {
-  padding: 0 5px;
-  border: 3px solid black;
+  padding: 0 8px;
 }
 
 .form {
@@ -55,7 +54,22 @@ input {
   padding: 7px;
 }
 
+.style-btn {
+  background-color: rgb(4, 35, 46);
+  color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 4px 4px rgb(169, 168, 168);
+  cursor: pointer;
+}
+
+.style-btn:hover {
+  background-color: rgb(35, 40, 176);
+  transition: 0.7s;
+}
+
 #submit-score {
-  width: 20%;
-  margin-left: 80%;
+  width: 13%;
+  margin-left: 87%;
+  padding: 4px 0%;
 }

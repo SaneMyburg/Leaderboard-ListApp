@@ -16,6 +16,14 @@ const displayScore = (player, playerScore) => {
   usersScore.appendChild(scoreDiv);
 };
 
+refreshButton.addEventListener('click', async () => {
+  usersScore.innerHTML = '';
+  const scores = await getData();
+  scores.result.forEach((score) => {
+    displayScore(score.user, score.score);
+  });
+});
+
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const player = name.value;
@@ -27,12 +35,15 @@ form.addEventListener('submit', async (e) => {
 
   name.value = '';
   score.value = ' ';
+
+  displayScore(player, playerScore)
 });
 
-refreshButton.addEventListener('click', async () => {
-  usersScore.innerHTML = ' ';
+// on page load
+window.addEventListener('load', async () => {
   const scores = await getData();
   scores.result.forEach((score) => {
     displayScore(score.user, score.score);
   });
 });
+

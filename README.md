@@ -109,6 +109,7 @@ npx stylelint "**/*.{css,scss}"
 ```
 ```sh
 npx eslint .
+```
 
 ### Usage
 
